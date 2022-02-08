@@ -276,9 +276,9 @@ void CodeMenu()
 	//main page
 	vector<Line*> MainLines;
 #if DOLPHIN_BUILD
-	MainLines.push_back(new Comment("Bird Build Netplay Code Menu", &MENU_TITLE_CHECK_LOCATION));
+	MainLines.push_back(new Comment("ILPM Build Netplay Code Menu", &MENU_TITLE_CHECK_LOCATION));
 #else
-	MainLines.push_back(new Comment("Bird Build Code Menu", &MENU_TITLE_CHECK_LOCATION));
+	MainLines.push_back(new Comment("ILPM Build Code Menu", &MENU_TITLE_CHECK_LOCATION));
 #endif
 
 	MainLines.push_back(new Comment("X = Reset Selection | Y = Reset Page"));
@@ -291,9 +291,9 @@ void CodeMenu()
 	
 	MainLines.push_back(&DebugMode.CalledFromLine);
 #if DOLPHIN_BUILD
-	MainLines.push_back(new Selection("Stagelist", { "Middle 3", "PMBR (lol)", "King Build Singles", "King Build Doubles" }, 0, STAGELIST_INDEX));
+	MainLines.push_back(new Selection("Stagelist", { "ILPM", "Middle 3", "PMBR" }, 0, STAGELIST_INDEX));
 #else
-	MainLines.push_back(new Selection("Stagelist", { "Middle 3", "PMBR (lol)", "King Build Singles", "King Build Doubles" }, 1, STAGELIST_INDEX));
+	MainLines.push_back(new Selection("Stagelist", { "ILPM", "Middle 3", "PMBR" }, 0, STAGELIST_INDEX));
 #endif
 	constantOverrides.emplace_back(0x80523400, STAGELIST_INDEX);
 	//	MainLines.push_back(new Selection("Endless Friendlies", { "OFF", "Same Stage", "Random Stage", "Round Robin" }, 0, INFINITE_FRIENDLIES_INDEX));
